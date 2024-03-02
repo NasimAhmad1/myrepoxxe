@@ -7,10 +7,10 @@ data "aws_ip_ranges" "useast12" {
 
 data "aws_ami" "latest-ubuntu" {
   most_recent = true
-  owners = [ "099720109477" ]
+  owners = [ "amazon" ]
   filter {
      name = "name"
-     values = "ubuntu/images/hvm-ssd/ubuntu-xenial-16.0.04-amd64-server-*"
+     values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-*"]
   }
 
   filter {

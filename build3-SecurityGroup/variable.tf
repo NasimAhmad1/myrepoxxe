@@ -15,6 +15,9 @@ variable "AMIS" {
 } 
 
 variable "AWS_REGION" {
-    default = ["us-east-1", "us-east-2"]
-  
+  type = list
+    default = {
+      "us-east-1" , 
+      "us-east-2"
+    } 
 }
