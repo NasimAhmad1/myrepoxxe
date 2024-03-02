@@ -37,16 +37,15 @@ resource "aws_security_group" "sg_custom" {
 resource "aws_instance" "myfirstinstance" {
   ami = data.aws_ami.latest-ubuntu.id
   instance_type = "t2.micro"
-  availability_zone = data.aws_availability_zones.useastaz.name[0]
+  availability_zone = data.aws_availability_zones.useastaz.names[0]
 
+  provisioner "local-exec" {
+   command = "echo ${aws_instance.myfirstinstance.private_ip} >> privateIp.txt"
+ }
   tags = {
     Name = "custom_instance"
   }
- 
- provisioner "local-exec" {
-   command = "echo aws_instance.myfirstinstance.Private_IP >> privateIp.txt"
- }
 }
-output "Public_IP" {
-  value = aws_instance.myfirstinstance.Public_IP
+output "public_ip" {
+  value = aws_instance.myfirstinstance.public_ip
 }
