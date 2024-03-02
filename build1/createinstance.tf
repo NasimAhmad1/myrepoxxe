@@ -21,8 +21,8 @@ resource "aws_instance" "myfirstinstance" {
   
   provisioner "remote-exec" {
     inline = [ 
-        "sudo chmod +x /tmp/installngnix.sh"
-        "sudo sed -i -e 's/\r$\\' /tmp/installngnix.sh"
+        "sudo chmod +x /tmp/installngnix.sh",
+        "sudo sed -i -e 's/\r$\\' /tmp/installngnix.sh",
         "sudo /tmp/installngnix.sh"
     ]
     
