@@ -6,8 +6,8 @@ resource "aws_db_subnet_group" "mariadb_private" {
 }
 
 # RDS parameter
-resource "aws_db_parameter_group" "mariabd_parameter" {
-  name = "mariadb_parameter"
+resource "aws_db_parameter_group" "mariabd-parameter" {
+  name = "mariadb-parameter"
   family = "mariadb10.4"
   description = "mariadb parameter"
 
@@ -28,7 +28,7 @@ resource "aws_db_instance" "maridb_instace" {
   username = "root"
   password = "mariadb123"
   db_subnet_group_name = aws_db_subnet_group.Mariadb_private.name
-  parameter_group_name = aws_db_parameter_group.mariabd_parameter.name
+  parameter_group_name = aws_db_parameter_group.mariabd-parameter.name
   multi_az = "false"
   vpc_security_group_ids = [aws_security_group.allow_mariadb.id]
   storage_type = "gp2"
