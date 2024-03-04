@@ -16,23 +16,6 @@ resource "aws_instance" "myinstance" {
   }
 }
 
-# EBS Resource Creation
-resource "aws_ebs_volume" "volume1" {
-  type = "gp2"
-  size = 50
-  availability_zone = "us-east-1a"
-
-  tags = {
-    Name = EBS-Volume-1
-  }
-}
-
-# Attached EBS volume
-resource "aws_volume_attachment" "ebs-volume-1" {
-  instance_id = aws_instance.myinstance.id
-  volume_id = aws_ebs_volume.volume1.id
-  device_name =  "/dev/xvdb"
-}
 
 output "public_ip" {
   value = aws_instance.myinstance.public_ip
