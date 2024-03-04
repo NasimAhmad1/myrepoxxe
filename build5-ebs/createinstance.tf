@@ -30,6 +30,6 @@ resource "aws_ebs_volume" "volume1" {
 # Attached EBS volume
 resource "aws_volume_attachment" "ebs-volume-1" {
   instance_id = aws_instance.myinstance.id
-  volume_id = aws_ebs_volume.volume1
+  volume_id = aws_ebs_volume.volume1.id
   device_name =  "/dev/xvdb"
 }
