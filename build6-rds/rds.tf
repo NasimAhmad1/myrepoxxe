@@ -8,7 +8,7 @@ resource "aws_db_subnet_group" "mariadb_private" {
 # RDS parameter
 resource "aws_db_parameter_group" "mariabd-parameter" {
   name = "mariadb-parameter"
-  family = "mariadb10.4"
+  family = "mariadb10.11"
   description = "mariadb parameter"
 
   parameter {
@@ -22,7 +22,7 @@ resource "aws_db_parameter_group" "mariabd-parameter" {
 resource "aws_db_instance" "maridb_instace" {
   allocated_storage = 20
   engine = "mariadb"
-  engine_version = "10.4.8"
+  engine_version = "10.11.6"
   instance_class = "db.t2.micro"
   identifier = "mariadb"
   username = "root"
