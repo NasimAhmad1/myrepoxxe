@@ -1,6 +1,6 @@
 # Create MariDB Subnet
-resource "aws_db_subnet_group" "Mariadb_private" {
-    name = "Mariadb_private"
+resource "aws_db_subnet_group" "mariadb_private" {
+    name = "mariadb_private"
     subnet_ids = [ aws_subnet.private_subnet-1.id, aws_subnet.private_subnet-2.id ]
     description = "mariadb subnet"
 }

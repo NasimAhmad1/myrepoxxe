@@ -19,7 +19,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    name = allow_ssh
+    name = "allow_ssh"
   }
 }
 
@@ -43,6 +43,6 @@ resource "aws_security_group" "allow_mariadb" {
   }
 
   tags = {
-    name = "MariaDB"
+    name = "mariadb"
   }
 }
