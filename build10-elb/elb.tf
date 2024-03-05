@@ -2,14 +2,14 @@
 
 resource "aws_elb" "launch-elb" {
     name = "launch-elb"
-    subnets = [ aws_subnet.public_subnet-1, aws_subnet.public_subnet-2 ]
-    security_groups = [ aws_security_group.allow-elb ]
+    subnets = [ aws_subnet.public_subnet-1.id, aws_subnet.public_subnet-2.id ]
+    security_groups = [ "aws_security_group.allow-elb.id" ]
 
     listener {
       instance_port = 80
       instance_protocol = "http"
       lb_port = 80
-      lb_protocol = 80
+      lb_protocol = "http"
 
     }
 
@@ -27,7 +27,7 @@ resource "aws_elb" "launch-elb" {
     connection_draining_timeout = 400
     
     tags = {
-        Name = launch-elb
+        Name = "launch-elb"
     }
  
 }

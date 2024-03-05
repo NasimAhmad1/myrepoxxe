@@ -22,7 +22,7 @@ resource "aws_security_group" "allow_ssh" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    security_groups = [aws_security_group.allow-elb.id]
+    security_groups = [aws_security_group.allow-elb.name]
   }
 
   tags = {
