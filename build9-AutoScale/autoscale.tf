@@ -18,14 +18,14 @@ resource "aws_autoscaling_group" "auto-scaling-group" {
   min_size = 1
   max_size = 2
   launch_configuration = aws_launch_configuration.launch-1.name
-  vpc_zone_identifier = ["us-east-1a", "us-east-1b"]
+  vpc_zone_identifier = [aws_subnet.public_subnet-1.id, aws_subnet.public_subnet-2.id]
   health_check_grace_period = 200
   health_check_type = "EC2"
   force_delete = "true"
   
   tag {
     key = "Name"
-    value = launch-1
+    value = "launch-1"
     propagate_at_launch = "true"
   }
 
