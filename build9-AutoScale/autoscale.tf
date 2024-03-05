@@ -1,7 +1,7 @@
 #Auto Scaling Launch Configuration
 resource "aws_launch_configuration" "launch-1" {
   name_prefix = "launch-1"
-  image_id = file(var.AMIS, var.AWS_ACCESS_REGION)
+  image_id = lookup(var.AMIS, var.AWS_REGION)
   instance_type = "t2.micro"
   key_name = aws_key_pair.ssh_key.key_name
 }
