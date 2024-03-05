@@ -3,7 +3,7 @@
 resource "aws_elb" "launch-elb" {
     name = "launch-elb"
     subnets = [ aws_subnet.public_subnet-1.id, aws_subnet.public_subnet-2.id ]
-    security_groups = [ "aws_security_group.allow-elb.id" ]
+    security_groups = [ aws_security_group.allow-elb.id ]
 
     listener {
       instance_port = 80
