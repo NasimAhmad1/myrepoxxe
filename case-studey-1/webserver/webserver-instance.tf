@@ -53,7 +53,7 @@ resource "aws_security_group" "levelup-sg" {
 }
 
 resource "aws_key_pair" "levelup-key" {
-    key_name = id_rsa
+    key_name = "id_rsa"
     public_key = file(var.PATH_TO_KEY)
   
 }
