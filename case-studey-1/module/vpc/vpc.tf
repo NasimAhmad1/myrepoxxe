@@ -117,7 +117,7 @@ resource "aws_route_table" "private_route" {
 
 # Associate Subnet with Route
 resource "aws_route_table_association" "public_subnet-1" {
-  subnet_id = aws_subnet.levelup_vpc_public_subnet-1
+  subnet_id = aws_subnet.levelup_vpc_public_subnet-1.id
   route_table_id = aws_route_table.public_route.id
 }
 
@@ -128,7 +128,7 @@ resource "aws_route_table_association" "public_subnet-2" {
 
 resource "aws_route_table_association" "private-subnet-1" {
     subnet_id = aws_subnet.levelup_vpc_private_subnet-1.id
-    route_table_id = aws_route_table.private_route
+    route_table_id = aws_route_table.private_route.id
   
 }
 
