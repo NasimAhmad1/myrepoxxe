@@ -63,7 +63,7 @@ resource "aws_launch_configuration" "levelup-config" {
     instance_type = var.INSTANCE_TYPE
     user_data = "#!/bin/bash\napt-get update\napt-get -y install net-tools nginx\nMYIP=`ifconfig | grep -E '(inet 10)|(addr:10)' | awk '{ print $2 }' | cut -d ':' -f2`\necho 'Hello Team\nThis is my IP: '$MYIP > /var/www/html/index.html"
     security_groups = [aws_key_pair.levelup-key.id]
-    key_name = aws_key_pair.levelup-key.name
+    key_name = aws_key_pair.levelup-key.key_name
 
     root_block_device {
       volume_size = "20"
