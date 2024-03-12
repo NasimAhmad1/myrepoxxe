@@ -3,6 +3,11 @@ variable "ENVIRONMENT" {
   default = "Development"
 }
 
+variable "ENVIRONMENTT" {
+  type = string
+  default = "development"
+}
+
 variable "AWS_REGION" {
   type = string
   default = "us-east-2"

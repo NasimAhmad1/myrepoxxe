@@ -8,7 +8,7 @@ module "levelup-vpc" {
 #Define Subnet Group for RDS Service
 
 resource "aws_db_subnet_group" "levelup_db_subnet" {
-    name = "${var.ENVIRONMENT}-db-subnet"
+    name = "${var.ENVIRONMENTT}-db-subnet"
     subnet_ids = [
       "${var.vpc_private_subnet-1}",
       "${var.vpc_private_subnet-2}",
