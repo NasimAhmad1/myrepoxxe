@@ -40,7 +40,7 @@ variable "RDS_ENGINE" {
 
 variable "RDS_ENGINE_VERSION" {
     type = string
-    default = "8.0.20"
+    default = "8.0.36"
 }
 
 variable "BACKUP" {
@@ -60,4 +60,10 @@ variable "USER" {
 variable "PASSWD" {
   type = string
   default = "test123"
+}
+
+variable "DB.INSTANCE_CLASS" {
+  type = string
+  default = "db.t3.micro"
+  
 }
