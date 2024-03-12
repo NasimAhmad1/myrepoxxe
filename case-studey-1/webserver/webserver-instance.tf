@@ -114,3 +114,8 @@ resource "aws_lb_listener" "levelup-listener" {
     }
   
 }
+
+output "load_balancer_output" {
+    value = aws_alb.levelup-alb.dns_name
+  
+}
