@@ -42,7 +42,7 @@ resource "aws_db_instance" "levelup-rds" {
    storage_type = "gp2"
    engine = var.RDS_ENGINE
    engine_version = var.RDS_ENGINE_VERSION
-   instance_class = var.DB.INSTANCE_CLASS
+   instance_class = var.DB_INSTANCE_CLASS
    backup_retention_period = var.BACKUP 
    publicly_accessible = var.PUBLIC 
    username = var.USER 

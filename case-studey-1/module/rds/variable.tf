@@ -62,7 +62,7 @@ variable "PASSWD" {
   default = "test123"
 }
 
-variable "DB.INSTANCE_CLASS" {
+variable "DB_INSTANCE_CLASS" {
   type = string
   default = "db.t3.micro"
   
