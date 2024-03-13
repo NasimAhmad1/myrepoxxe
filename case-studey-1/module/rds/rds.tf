@@ -37,7 +37,7 @@ resource "aws_security_group" "db_security_group" {
 }
 
 resource "aws_db_instance" "levelup-rds" {
-   identifier = "${var.ENVIRONMENT}-levelup-rds"
+   identifier = "${var.ENVIRONMENTT}-levelup-rds"
    allocated_storage = var.LEVELUP_RDS_ALLOCATED_STORAGE
    storage_type = "gp2"
    engine = var.RDS_ENGINE

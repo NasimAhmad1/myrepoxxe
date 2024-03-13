@@ -64,7 +64,7 @@ variable "USER" {
 
 variable "PASSWD" {
   type = string
-  default = "test123"
+  default = "mysqladmin"
 }
 
 variable "DB_INSTANCE_CLASS" {
