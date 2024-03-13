@@ -1,9 +1,10 @@
 resource "aws_iam_role" "eks_cluster" {
-    name = "eks-cluster"
-    assume_role_policy = <<POLICY
-    {
-    "Version": "2012-10-17",
-    "Statement": [
+  name = "eks-cluster"
+
+  assume_role_policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
     {
       "Effect": "Allow",
       "Principal": {
@@ -30,11 +31,12 @@ resource "aws_iam_policy_attachment" "AmazonEKSServicePolicy" {
 }
 
 resource "aws_iam_role" "eks_nodes" {
-    name = "eks-nodes"
-    assume_role_policy = <<POLICY
-    {
-    "Version": "2012-10-17",
-    "Statement": [
+  name = "eks-node-group-levelup"
+
+  assume_role_policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
     {
       "Effect": "Allow",
       "Principal": {
