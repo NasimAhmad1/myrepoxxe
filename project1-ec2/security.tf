@@ -1,6 +1,6 @@
 resource "aws_security_group" "project1-sg" {
     vpc_id = aws_vpc.project1.id
-    name = allow-ssh
+    name = "allow-ssh"
     description = "Allow ssh and web port for project1"
 
     egress {
