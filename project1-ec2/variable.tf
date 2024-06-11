@@ -12,6 +12,3 @@ variable "PATH_TO_PUBLIC_KEY" {
     default = ssh_key.pub
   
 }
-variable "PATH_TO_PRIVATE_KEY" {
-  default = "ssh_key"
-}
