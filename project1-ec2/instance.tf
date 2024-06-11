@@ -3,6 +3,7 @@ resource "aws_instance" "project1-ec2" {
     vpc_security_group_ids = [ aws_security_group.project1-sg.id ]
     subnet_id = aws_subnet.public_subnet1.id
     key_name = aws_key_pair.project1-key.key_name
+    instance_type = "t2.micro"
     tags = {
       Name = "project1-ec2"
     }
