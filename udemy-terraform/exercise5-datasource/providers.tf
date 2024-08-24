@@ -31,15 +31,3 @@ provider "aws" {
     }
   }
 }
-
-provider "random" {}
-
-provider "aws" {
-    region = "us-west-1"
-    alias = "us-west"
-    default_tags {
-    tags = {
-      CreatedBy = "Terraform"
-    }
-   }
-}
