@@ -41,4 +41,5 @@ provider "aws" {
     tags = {
       CreatedBy = "Terraform"
     }
+   }
 }
