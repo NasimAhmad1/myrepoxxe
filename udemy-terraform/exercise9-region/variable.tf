@@ -9,5 +9,6 @@ variable "AWS_SECRET_ACCESS_KEY" {
 }
 
 variable "aws_region" {
+  type = string
   default = ""
 }
