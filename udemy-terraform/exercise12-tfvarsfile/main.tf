@@ -10,3 +10,8 @@ output "bucketname" {
   value = aws_s3_bucket.terraform-tfvars.bucket
 }
 
+data "aws_region" "region" {}
+
+output "region" {
+  value = data.aws_region.region.name
+}
