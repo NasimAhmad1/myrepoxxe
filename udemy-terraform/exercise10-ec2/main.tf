@@ -7,7 +7,7 @@ data "aws_ami" "ubunut-image" {
   }
 
   filter {
-    name = "virtualiation-type"
+    name = "virtualization-type"
     values = [ "hvm" ]
   }
 }
