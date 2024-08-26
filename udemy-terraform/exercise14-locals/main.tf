@@ -19,8 +19,8 @@ resource "aws_instance" "custom-instance" {
 
   root_block_device {
     delete_on_termination = true
-    volume_size = var.ec2-volume-describe.size
-    volume_type = var.ec2-volume-describe.type
+    volume_size = var.ec2-volume.volume_size
+    volume_type = var.ec2-volume.volume_type
   }
 
   tags = merge(local.common_tag, var.additional_tag )

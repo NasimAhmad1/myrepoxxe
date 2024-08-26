@@ -29,3 +29,15 @@ variable "additional_tag" {
   }
 
 }
+
+variable "ec2-volume" {
+  type = object({
+    volume_size = number
+    volume_type = string
+  })
+
+  default = {
+    volume_size = 20
+    volume_type = "gp3"
+  }
+}
