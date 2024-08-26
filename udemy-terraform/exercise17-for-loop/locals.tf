@@ -31,3 +31,18 @@ locals {
 locals {
   fullname = [for name in var.objet_list: "${name.firstname} ${name.lastname}" ]
 }
+
+output "doubled_number" {
+  value = local.doubled_number
+}
+
+output "even_number" {
+  value = local.even_number
+}
+output "firstname" {
+  value = local.firstname
+}
+
+output "fullname" {
+  value = local.fullname
+}
