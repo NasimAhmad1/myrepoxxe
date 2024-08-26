@@ -7,9 +7,9 @@ locals {
 
 locals {
   common_tag ={
-    project = locals.project
-    project_owner = locals.project_owner
-    cost_center = locals.cost_center
-    managed_by = locals.managed_by
+    project = local.project
+    project_owner = local.project_owner
+    cost_center = local.cost_center
+    managed_by = local.managed_by
   }
 }
