@@ -15,6 +15,7 @@ variable "AWS_SECRET_ACCESS_KEY" {
 
 variable "number_list" {
     type = list(number)
+    default = [ 1, 3, 5, 6, 8, 10 ]
 }
 
 variable "objet_list" {
@@ -22,5 +23,9 @@ variable "objet_list" {
       firstname = string
       lastname = string
     }))
+    default = [ {
+      firstname = "Nasim"
+      lastname = "Ahmad"
+    } ]
 }
 
