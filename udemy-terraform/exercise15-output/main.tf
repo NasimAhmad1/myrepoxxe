@@ -37,6 +37,7 @@ resource "aws_s3_bucket" "output-bucket" {
 output "s3-bucket" {
   value = aws_s3_bucket.output-bucket.bucket
   description = "Bucket Created By Terraform"
+  sensitive = true
 }
 
 
