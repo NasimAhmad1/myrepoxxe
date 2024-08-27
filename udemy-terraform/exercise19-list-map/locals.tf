@@ -34,13 +34,13 @@ locals {
 
 locals {
   user_map = {
-    for user_map in var.users: user_map.username => user_map.roles...
+    for user_map in var.users: user_map.username => user_map.role...
   }
 }
 
 locals {
   user_map2 = {
-    for username, roles in local.user_map: username => { role = roles}
+    for username, roles in local.user_map: username => { roles = roles}
   }
 }
 
