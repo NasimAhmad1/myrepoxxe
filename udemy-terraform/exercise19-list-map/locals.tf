@@ -77,5 +77,5 @@ output "user_map2" {
 }
 
 output "user_to_roles" {
-  value = local.user_map2[var.user_output].roles
+  value = local.user_map2[var.user_to_output].roles
 }
