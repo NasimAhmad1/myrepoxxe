@@ -40,7 +40,7 @@ variable "list_map" {
 variable "users" {
 type = list(object({
   username = string
-  roles = string
+  role = string
 }))
 }
 
