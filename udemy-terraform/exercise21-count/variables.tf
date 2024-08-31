@@ -13,7 +13,7 @@ variable "AWS_SECRET_ACCESS_KEY" {
   default = ""
 }
 
-variable "count" {
+variable "subnet-count" {
   type = number
   default = 2
 }

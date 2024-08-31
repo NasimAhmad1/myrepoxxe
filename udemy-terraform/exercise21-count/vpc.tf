@@ -15,7 +15,7 @@ resource "aws_vpc" "project-vpc" {
 }
 
 resource "aws_subnet" "subnet1" {
-    count = var.count
+    count = var.subnet-count
   vpc_id = aws_vpc.project-vpc.id
   cidr_block = "10.0.${count.index}.0/24"
   map_public_ip_on_launch = true
