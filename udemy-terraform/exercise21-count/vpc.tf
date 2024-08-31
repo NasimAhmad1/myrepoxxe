@@ -1,5 +1,5 @@
 locals {
-  project = count-project
+  project = "count-project"
 }
 
 
@@ -15,7 +15,7 @@ resource "aws_vpc" "project-vpc" {
 }
 
 resource "aws_subnet" "subnet1" {
-    count = 2
+    count = var.count
   vpc_id = aws_vpc.project-vpc.id
   cidr_block = "10.0.${count.index}.0/24"
   map_public_ip_on_launch = true
