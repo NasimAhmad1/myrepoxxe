@@ -18,6 +18,7 @@ resource "aws_instance" "count-instance" {
     instance_type = "t2.micro"
     ami = data.aws_ami.ubunut.id
     count = var.aws_ec2-count
+    subnet_id = aws_subnet.subnet1[0].id
 
     tags = {
       name = "${local.project}- ${count.index}"
